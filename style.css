@@ -23,6 +23,16 @@ body {
   cursor: pointer;
 }
 
+.sound {
+  height: 34px;
+  width: 34px;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  cursor: pointer;
+  filter: invert(80%);
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -51,24 +61,25 @@ body {
 .parah {
   position: absolute;
   top: 100%;
-  right: 76%;
+  right: 80%;
 }
 
 .param {
   position: absolute;
   top: 100%;
-  right: 39%;
+  right: 44%;
 }
 
 .paras {
   position: absolute;
   top: 100%;
-  right: 4%;
+  right: 9%;
 }
 
 .num {
   width: 100px;
   margin-left: 24px;
+  margin-right: 24px;
 }
 
 @keyframes pop {
