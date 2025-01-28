@@ -82,23 +82,6 @@ body {
   margin-right: 24px;
 }
 
-@keyframes pop {
-  0% {
-    transform: scale(0.9);
-    box-shadow: 0px 0px 32px #7048e8;
-  }
-
-  50% {
-    transform: scale(0.9);
-    box-shadow: 0px 0px 20px #7048e8;
-  }
-
-  100% {
-    transform: scale(1);
-    box-shadow: 0px 0px 20px #7048e8;
-  }
-}
-
 .blackc {
   stroke: #111;
   fill: #111;
@@ -128,17 +111,12 @@ body {
   box-shadow: 0px 0px 8rem 2rem #7a3fdf;
   animation: moveAnimation 30s infinite;
   opacity: 0.2;
-  z-index: -1;
 }
 
 @keyframes moveAnimation {
   0% {
     top: 20rem;
     left: 50%;
-  }
-  20% {
-    top: 5rem;
-    left: 10%;
   }
   40% {
     top: 2rem;
@@ -147,10 +125,6 @@ body {
   60% {
     top: 8%;
     left: 20%;
-  }
-  80% {
-    top: 2rem;
-    left: 80%;
   }
   100% {
     top: 0%;

@@ -54,11 +54,13 @@ moon.addEventListener("click", () => {
 });
 
 soundPlay.addEventListener("click", () => {
-  if (soundPlay.src.includes("mute.png")) {
-    soundPlay.src = "volume.png";
-    sound = true;
-  } else if (soundPlay.src.includes("volume.png")) {
+  if (soundPlay.src.includes("volume.png")) {
     soundPlay.src = "mute.png";
+    sound = true;
+    soundPlay.title = "Mute Sound";
+  } else if (soundPlay.src.includes("mute.png")) {
+    soundPlay.src = "volume.png";
     sound = false;
+    soundPlay.title = "Start Sound";
   }
 });
