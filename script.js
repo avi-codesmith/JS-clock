@@ -14,9 +14,12 @@ let soundTick = new Audio("soundTick.mp3");
 let sound = false;
 
 setInterval(() => {
-  if (sound === true) {
+  if (sound) {
     soundTick.play();
+  } else {
+    soundTick.muted = true;
   }
+
   const currentTime = new Date();
   hrs.innerHTML = currentTime.getHours().toString().padStart(2, "0");
   min.innerHTML = currentTime.getMinutes().toString().padStart(2, "0");
@@ -55,12 +58,14 @@ moon.addEventListener("click", () => {
 
 soundPlay.addEventListener("click", () => {
   if (soundPlay.src.includes("volume.png")) {
-    soundPlay.src = "mute.png";
     sound = true;
+    soundTick.muted = false;
+    soundPlay.src = "mute.png";
     soundPlay.title = "Mute Sound";
   } else if (soundPlay.src.includes("mute.png")) {
-    soundPlay.src = "volume.png";
     sound = false;
+    soundTick.muted = true;
+    soundPlay.src = "volume.png";
     soundPlay.title = "Start Sound";
   }
 });
